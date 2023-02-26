@@ -38,6 +38,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 .search{
   width: 100%;
@@ -83,7 +85,7 @@ button{
 
 .logo-container{
   height: 100%;
-  width: 40%;
+  width: 30%;
   background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
@@ -132,7 +134,7 @@ button{
 .logo-container img{
   width: auto;
   max-width: 30%;
-  height: 100%;
+  height: 80%;
   visibility: visible;
 }
 .logo-container h1{
