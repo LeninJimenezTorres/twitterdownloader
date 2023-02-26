@@ -80,7 +80,9 @@ function Home() {
         </div>
       </div>
       <div className="results">
-        <AdsComponent dataAdSlot='3179416232' />
+        <label className="label-add">
+          <AdsComponent dataAdSlot='3179416232' />
+        </label>
         <AdSense.Google
           client='ca-pub-1159805153470467'
           slot='3179416232'
@@ -89,6 +91,9 @@ function Home() {
           responsive='true'
           layoutKey='-gw-1+2a-9x+5c'
         />
+        {status === "success" && <Success data={data} />}
+        {status === "processing" && <Processing />}
+        {status === "failed" && <Failed message={data.message} />}
         <Ad2
           client='ca-pub-1159805153470467'
           slot='3179416232'
@@ -103,9 +108,6 @@ function Home() {
           layout="in-article"
           format="fluid"
         /> */}
-        {status === "success" && <Success data={data} />}
-        {status === "processing" && <Processing />}
-        {status === "failed" && <Failed message={data.message} />}
       </div>
     </div>
   )
