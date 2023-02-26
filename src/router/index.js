@@ -8,6 +8,7 @@ function Router() {
         <Routes>
             <Route exact element={<Home/>} path="/"/>
             <Route exact element={<Donations/>} path="/donations"/>
+            <Route exact element={<Developer/>} path="/developer"/>
         </Routes>
     </div>
   )

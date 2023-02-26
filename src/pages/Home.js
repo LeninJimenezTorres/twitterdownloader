@@ -4,6 +4,9 @@ import {SubmitButton} from "../components/atoms/Button";
 
 import {Success, Processing, Failed} from "../components/molecules/Results"
 import logo from '../galery/1x/logo.png'
+import {Adsense as Ad2}  from '@ctrl/react-adsense';
+import AdSense from 'react-adsense';
+import AdsComponent from "../components/atoms/AdsComponent";
 
 function Home() {
   let urlAuthor = 'https://github.com/LeninJimenezTorres';
@@ -60,7 +63,7 @@ function Home() {
         <div className="navbar">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href={urlAuthor}>Author</a></li>
+            <li><a href={urlAuthor} target='_blank'>Author</a></li>
             <li><a href="/donations">Donations</a></li>
           </ul>
         </div>
@@ -77,6 +80,29 @@ function Home() {
         </div>
       </div>
       <div className="results">
+        <AdsComponent dataAdSlot='3179416232' />
+        <AdSense.Google
+          client='ca-pub-1159805153470467'
+          slot='3179416232'
+          style={{ display: 'block' }}
+          format='auto'
+          responsive='true'
+          layoutKey='-gw-1+2a-9x+5c'
+        />
+        <Ad2
+          client='ca-pub-1159805153470467'
+          slot='3179416232'
+          style={{ display: 'block' }}
+          layout="in-article"
+          format="fluid"
+        />
+        {/* <Adsense
+          client="ca-pub-1159805153470467"
+          slot="7259870550"
+          style={{ display: 'block' }}
+          layout="in-article"
+          format="fluid"
+        /> */}
         {status === "success" && <Success data={data} />}
         {status === "processing" && <Processing />}
         {status === "failed" && <Failed message={data.message} />}
